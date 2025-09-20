@@ -1,0 +1,14 @@
+#!/usr/bin/sh
+
+if [ "$XDG_CURRENT_DESKTOP" = "gamescope" ]; then
+  while [ "$#" -gt 1 ]; do
+    if [ "$1" = "--" ]; then
+      shift
+      break
+    fi
+    shift
+  done
+  exec "$@"
+else
+  gamescope "$@"
+fi

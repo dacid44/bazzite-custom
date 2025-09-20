@@ -60,3 +60,7 @@ chmod $SCRIPT_PERMISSIONS /usr/bin/steamos-polkit-helpers/steamos-set-timezone
 
 cp $SOURCE_DIR/usr/share/wayland-sessions/steam.desktop /usr/share/wayland-sessions/steam.desktop
 chmod $SESSION_FILE_PERMISSIONS /usr/share/wayland-sessions/steam.desktop
+
+# Copy custom scripts to image
+cp /ctx/gamescope-once /usr/bin/gamescope-once
+chmod 755 /usr/bin/gamescope-once
